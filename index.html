@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <title>Home - protosrl.github.io</title>
+    <meta name="description" content="Proto's Website! This is where all personal programming projects are posted" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://protosrl.github.io/" />
+    <meta property="og:title" content="protosrl.github.io" />
+    <meta property="og:image" content="https://protosrl.github.io/protosrl_logo.png" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="js/box.css" />
+    <script src="js/view_code.js"></script>
+    <script src="js/drag.js"></script>
+    <script src="js/alert.js"></script>
+</head>
+
+<body>
+    <img src="" id="bg_img" class="background" />
+    <img src="https://protosrl.github.io/background_images/texture.png" class="background" style="opacity:.5" />
+        
+    <div id="main">
+        <a href='https://www.youtube.com/channel/UCR6vxXzR9BXqk0ik5bBNRjQ'  target="_blank"><img src="resources/youtube.png" class="icon" /></a>
+        <a href='https://twitch.tv/protosrl'  target="_blank"><img src="resources/twitch.png" class="icon" /></a>
+        <a href='https://github.com/ProtoSRL'  target="_blank"><img src="resources/github.png" class="icon" /></a>
+        <a href='https://www.speedrun.com/user/ProtoSRL'  target="_blank"><img src="resources/src.png" class="icon" /></a>
+        <div id="inner">
+            <h1><span class='big1'>Hello!&nbsp;</span>I'm Proto!</h1>
+            <p>I'm a Breath of the Wild and Kingdom Hearts speedrunner who enjoys programming</p>
+            <p>I also play four instruments.</p>
+            <hr />
+            <p>Current Projects</p>
+            <a href='https://protosrl.github.io/kh1fm_lua_mods'><div class="widget">
+                <img src="https://protosrl.github.io/kh1fm_lua_mods/favicon.ico" />
+                <span>KH1FM Lua Mods</span>
+            </div></a>
+            
+            <hr />
+            <p>Buttons that definitely won't alter the site in any way ;)</p>
+            <button onclick="Button1()">Epilepsy Warning (Serious)</button>
+            <button onclick="Button2()">Plug</button>
+            <button onclick="Button3()">View Code</button>
+            <script>
+                let NUMBER_OF_IMAGES = 13;
+
+                window.onload = _ => {
+                    let img_url = `https://protosrl.github.io/background_images/${(Math.floor(Math.random()*NUMBER_OF_IMAGES) + 1)}.png`;
+                    let temp = new Image();
+                    temp.src = img_url;
+                    let bg = document.querySelector("#bg_img");
+                    temp.onload = _ => {
+                        bg.src = img_url;
+                        bg.classList.add('fadein');
+                        
+                    }
+                    
+                }
+                let Button2 = _ => setInterval(_=>{
+                    [...document.querySelectorAll("*")].forEach(x=>x.style.position=['fixed','absolute','relative'][~~(Math.random()*3)])
+                },1)
+                let Button3 = _ => {
+                    [...document.querySelectorAll("*")].forEach(x=>{
+                        if(["BUTTON","P","SPAN","H1"].includes(x.tagName)) x.innerText = x.innerText.replace(/\w+/g,"plz subscribe");
+                    })
+                }
+                let Button4 = view_code;
+                
+                document.querySelector('#inner').innerHTML += '<br>'.repeat(10);
+                
+            
+            </script>
+        </div>
+    </div>  
+</body>
