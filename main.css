@@ -21,7 +21,7 @@ hr {
     margin-bottom: 30px;
 }
 .background {
-    filter: saturate(300%);
+    filter: saturate(150%);
     min-height: 100%;
     min-width: 100%;
     position: fixed;
