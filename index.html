@@ -53,15 +53,15 @@
                     }
                     
                 }
-                let Button2 = _ => setInterval(_=>{
+                let Button1 = _ => setInterval(_=>{
                     [...document.querySelectorAll("*")].forEach(x=>x.style.position=['fixed','absolute','relative'][~~(Math.random()*3)])
                 },1)
-                let Button3 = _ => {
+                let Button2 = _ => {
                     [...document.querySelectorAll("*")].forEach(x=>{
-                        if(["BUTTON","P","SPAN","H1"].includes(x.tagName)) x.innerText = x.innerText.replace(/\w+/g,"plz subscribe");
+                        if(["BUTTON","P","SPAN","H1"].includes(x.tagName))x.innerText='plz subscribe'
                     })
                 }
-                let Button4 = view_code;
+                let Button3 = view_code;
                 
                 document.querySelector('#inner').innerHTML += '<br>'.repeat(10);
                 
